@@ -54,7 +54,7 @@ impl Editor {
         }
     }
 
-    pub fn draw(&mut self) -> Result<()> {
+    fn draw(&mut self) -> Result<()> {
         self.stdout
             .queue(cursor::MoveTo(self.cursor.x, self.cursor.y))?;
         self.stdout.flush()?;
